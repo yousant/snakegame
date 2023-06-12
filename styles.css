@@ -1,66 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
 
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
-*{
-    padding: 0;
-    margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .container {
-    background: url(../images/bg.jpg);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: url(../images/bg.jpg);
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Titillium Web", sans-serif;
+}
+
+#scoreBox {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#highscoreBox {
+  position: absolute;
+  top: 70px;
+  right: 80px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#board {
+  background: linear-gradient(rgb(170, 234, 170), rgb(235, 235, 164));
+  width: 90vmin;
+  height: 92vmin;
+  border: 2px solid black;
+  display: grid;
+  grid-template-rows: repeat(18, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+}
+
+.head {
+  background: linear-gradient(red, yellow);
+  border: 2px solid rgb(60, 3, 60);
+  transform: scale(1.05);
+  border-radius: 8px;
+}
+
+.snake {
+  background-color: purple;
+  border: 0.25vmin solid white;
+  border-radius: 12px;
+}
+
+.food {
+  background: linear-gradient(red, purple);
+  border: 0.25vmin solid black;
+  border-radius: 8px;
+}
+
+.btn {
+  position: absolute;
+  width: 9vw;
+  background-color: #1b781b;
+  color: rgb(170, 234, 170);
+  height: 10vh;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+#UP {
+  top: 67.5vh;
+  left: 10vw;
+}
+
+#DOWN {
+  bottom: 7.5vh;
+  left: 10vw;
+}
+
+#RIGHT {
+  top: 74.5vh;
+  right: 71.75vw;
+}
+
+#LEFT {
+  top: 74.5vh;
+  left: 0.75vw;
+}
+
+@media (max-width: 480px) {
+  .container {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: url(../images/bgm.png);
     min-height: 100vh;
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Titillium Web", sans-serif;
+  }
 
-}
-
-#scoreBox {
+  #scoreBox {
     position: absolute;
-    top: 9px;
-    right: 200px;
-    font-size: 40px;
+    /* text-align: center; */
+    top: 155px;
+    color: rgb(170, 234, 170);
+    /* right: 100px; */
+    font-size: 18px;
+    right: 20px;
     font-weight: bold;
-}
+  }
 
-#highscoreBox{
+  #highscoreBox {
     position: absolute;
-    top: 60px;
-    right: 180px;
-    font-size: 32px;
+    /* text-align: center; */
+    color: rgb(235, 235, 164);
+    top: 175px;
+    right: 17px;
+    font-size: 15px;
     font-weight: bold;
-}
+  }
 
-#board {
+  #board {
     background: linear-gradient(rgb(170, 234, 170), rgb(235, 235, 164));
+    /* background: url(../images/mobbg.jpg); */
     width: 90vmin;
     height: 92vmin;
     border: 2px solid black;
     display: grid;
     grid-template-rows: repeat(18, 1fr);
     grid-template-columns: repeat(18, 1fr);
+  }
 
-}
-
-.head {
+  .head {
     background: linear-gradient(red, yellow);
-    border: 2px solid rgb(60, 3, 60);
+    border: 1.5px solid rgb(60, 3, 60);
     transform: scale(1.05);
-    border-radius: 8px;
+    border-radius: 4px;
+  }
 
-}
-
-.snake {
+  .snake {
     background-color: purple;
     border: 0.25vmin solid white;
-    border-radius: 12px;
-}
+    border-radius: 5px;
+  }
 
-.food {
+  .food {
     background: linear-gradient(red, purple);
-    border: .25vmin solid black;
-    border-radius: 8px;
-}
+    border: 0.25vmin solid black;
+    border-radius: 5px;
+  }
 
+  .btn {
+    position: absolute;
+    width: 9vw;
+    background-color: #1b781b;
+    color: rgb(235, 235, 164);
+    height: 5vh;
+    border: 2px solid rgb(170, 234, 170);
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 6.5px;
+  }
+
+  #UP {
+    top: 72.5vh;
+    left: 74.5vw;
+  }
+
+  #DOWN {
+    bottom: 6.25vh;
+    left: 74.5vw;
+  }
+
+  #RIGHT {
+    top: 77vh;
+    right: 7vw;
+  }
+
+  #LEFT {
+    top: 77vh;
+    left: 65.5vw;
+  }
+}

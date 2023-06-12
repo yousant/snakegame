@@ -4,15 +4,35 @@ const foodSound = new Audio('/music/food.mp3');
 const gameOverSound = new Audio('/music/gameover.mp3');
 const moveSound = new Audio('/music/move.mp3');
 const musicSound = new Audio('/music/music.mp3');
-let speed = 5;
+
+
+//for mobiles
+
+const btnUp = document.querySelector('#UP');
+const btnDown = document.querySelector('#DOWN');
+const btnLeft = document.querySelector('#LEFT');
+const btnRight = document.querySelector('#RIGHT');
+// const board = document.querySelector(".snake-board");
+
+
+
+let speed = 7.5;
 let score = 0;
 let lastPaintTime = 0;
+
+let up = false;
+let down = false;
+let left = false;
+let right = false;
+
 let snakeArr = [
     {x: 13, y: 15}
 ]
 food = {x: 6, y: 7};
 
 //Game Functions
+
+//for better fps requestanimation frame is used and it is calling game function gameEngine like recursion
 function main(ctime) {
     window.requestAnimationFrame(main);
     if((ctime - lastPaintTime)/1000 < 1/speed) {
@@ -30,6 +50,7 @@ function isCollide(snake) {
             return true;
         }
     }
+    //snake strikes the wall
     if(snake[0].x >= 18 || snake[0].x <= 0 || snake[0].y >= 18 || snake[0].y <= 0){
         return true;
     }
@@ -150,5 +171,27 @@ window.addEventListener('keydown', (e) => {
         default:
             break;
     }
+    
 
 });
+
+
+btnUp.addEventListener("click", () => {
+  inputDir.x = 0;
+  inputDir.y = -1;
+});
+
+btnDown.addEventListener("click", () => {
+  inputDir.x = 0;
+  inputDir.y = 1;
+});
+
+btnLeft.addEventListener("click", () => {
+  inputDir.x = -1;
+  inputDir.y = 0;
+});
+btnRight.addEventListener("click", () => {
+  inputDir.x = 1;
+  inputDir.y = 0;
+});
+
