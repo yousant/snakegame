@@ -10,7 +10,7 @@
 .container {
   overflow-x: hidden;
   overflow-y: hidden;
-  background: url(../images/bg.jpg);
+  background: url(./images/bg.jpg);
   min-height: 100vh;
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
