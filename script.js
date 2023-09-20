@@ -6,17 +6,11 @@ const moveSound = new Audio('move.mp3');
 const musicSound = new Audio('music.mp3');
 
 
-//for mobiles
-
-const btnUp = document.querySelector('#UP');
-const btnDown = document.querySelector('#DOWN');
-const btnLeft = document.querySelector('#LEFT');
-const btnRight = document.querySelector('#RIGHT');
-// const board = document.querySelector(".snake-board");
 
 
 
-let speed = 7.5;
+
+let speed = 9;
 let score = 0;
 let lastPaintTime = 0;
 
@@ -174,6 +168,15 @@ window.addEventListener('keydown', (e) => {
     
 
 });
+
+
+//for mobiles
+
+const btnUp = document.querySelector('#UP');
+const btnDown = document.querySelector('#DOWN');
+const btnLeft = document.querySelector('#LEFT');
+const btnRight = document.querySelector('#RIGHT');
+// const board = document.querySelector(".snake-board");
 
 
 btnUp.addEventListener("click", () => {
