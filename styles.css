@@ -28,13 +28,13 @@
   font-weight: bold;
 }
 
-#highscoreBox {
+/* #highscoreBox {
   position: absolute;
   top: 70px;
   right: 80px;
   font-size: 32px;
   font-weight: bold;
-}
+} */
 
 #board {
   background: linear-gradient(rgb(170, 234, 170), rgb(235, 235, 164));
@@ -122,15 +122,14 @@
     font-weight: bold;
   }
 
-  #highscoreBox {
+/*    #highscoreBox {
     position: absolute;
-    /* text-align: center; */
     color: rgb(235, 235, 164);
     top: 175px;
     right: 17px;
     font-size: 15px;
     font-weight: bold;
-  }
+  }  */
 
   #board {
     background: linear-gradient(rgb(170, 234, 170), rgb(235, 235, 164));
